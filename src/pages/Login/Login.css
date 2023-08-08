@@ -1,0 +1,114 @@
+/* login modal container */
+.Modal_container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: none;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
+.Modal_content_container {
+  display: flex;
+  width: 80%;
+  margin: 5% auto;
+  background-color: white;
+
+  border-radius: 15px;
+}
+/*card container for input fileds*/
+.cardContainerLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #edf1ff;
+  width: 50%;
+  padding: 10px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.imageLogin {
+  object-fit: cover;
+  width: 50%;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.login_exitSection {
+  align-self: flex-start;
+  padding: 10px;
+}
+.login_exitbutton {
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  font-family: "Courier New", Courier, monospace;
+}
+.login_titleHeading {
+  font-size: 34px;
+  font-family: "poppins";
+  color:black;
+}
+
+.userLoginContainer {
+  display: flex;
+  flex-direction: column;
+  color: rgb(68, 8, 233);
+  font-size: 23px;
+  padding: 9px;
+  font-weight: bold;
+}
+.login_buttonSection {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.socialbuttonContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 35px;
+}
+.userLoginButton{
+  width: 200px;
+  background-color: #b85d5d;
+  border-width: 0px;
+  border-radius: 25px;
+  color: white;
+  font-size: 25px;
+}
+
+.socailButton{
+  height: 45px;
+  width: 45px;
+  border-width: 0px;
+  border-radius: 5px;
+  font-size: 25px;
+}
+
+/*error message section*/
+.ErrorMessage{
+  color: red;
+  font-size: 15px;
+  font-family:italic;
+  text-align: center;
+}
+/*correct detials entered */
+.successfullymessage{
+  color: green;
+  font-size: 15px;
+  text-align: center;
+
+}
+/*singup buuton for create account*/
+.signUpbutton{
+  border-width:0px ;
+  background-color: rgb(211, 221, 224);
+  border-radius: 10px;
+  color: blue;
+  
+}

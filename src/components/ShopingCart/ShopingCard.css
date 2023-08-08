@@ -1,0 +1,60 @@
+/* text overflow ...  */
+.title-card-name {
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.checkout_button {
+  background-color: #d19c97;
+  border-width: 0px;
+  border-radius: 13px;
+  font-size: 22px;
+  color: black;
+}
+.checkout_button:hover {
+  color: white;
+}
+
+.quantity-showing {
+  font-size: 20px;
+  background-color: lightblue;
+  height: 30px;
+  width: 35px;
+}
+.buttons-increse-quantity {
+  background-color: #d19c97;
+  border-width: 0px;
+  color: black;
+  height: 30px;
+  width: 31px;
+}
+.buttons-increse-quantity:hover {
+  background-color: green;
+}
+.buttons-decrese-quantity {
+  background-color: #d19c97;
+  border-width: 0px;
+  color: black;
+  height: 30px;
+  width: 31px;
+}
+.buttons-decrese-quantity:hover {
+  background-color: red;
+}
+
+.card-deleted-button {
+  background-color: #d19c97;
+  border-width: 0px;
+  color: black;
+  height: 30px;
+  width: 31px;
+}
+.card-deleted-button:hover {
+  background-color: red;
+}
+
+.titlewraping{
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,10 @@
+.contactusSection{
+    display: flex;
+}
+@media screen and  (max-width:992px) {
+    .contactusSection{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}

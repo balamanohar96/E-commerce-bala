@@ -1,0 +1,77 @@
+.Modal_container_signup {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: none;
+  left: 0;
+  top: 0;
+  z-index: 120;
+}
+
+/*login buuton for login account*/
+.login_button{
+    border-width:0px ;
+    background-color: rgb(211, 221, 224);
+    border-radius: 10px;
+    color: blue;
+    
+  }
+.imagesignup{
+  object-fit: cover;
+  width: 50%;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.cardContainerSignup{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #edf1ff;
+  width: 50%;
+  padding: 10px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.signup_exitSection {
+  align-self: flex-end;
+  padding: 10px;
+}
+.signup_exitbutton {
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  font-family: "Courier New", Courier, monospace;
+}
+.signup_titleHeading {
+  font-size: 34px;
+  font-family: "poppins";
+  color:black;
+}
+
+.usersignupContainer {
+  display: flex;
+  flex-direction: column;
+  color: rgb(68, 8, 233);
+  font-size: 23px;
+  padding: 9px;
+  font-weight: bold;
+}
+.signup_buttonSection {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.usersignupButton{
+  width: 200px;
+  background-color: #b85d5d;
+  border-width: 0px;
+  border-radius: 25px;
+  color: white;
+  font-size: 25px;
+}

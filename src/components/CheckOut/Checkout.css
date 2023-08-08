@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+.checkout-first-container {
+  background-color: #edf1ff;
+  min-height: 300px;
+  margin-bottom: 48px;
+  font-family: poppins;
+}
+
+.checkout-heading{
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-size:  40px;
+}
+
+.checkout-heading-caption{
+  display: flex;
+  justify-content: center;
+}
+
+.checkout-heading-link{
+  color: #d19c97;
+  font-size: 16px;
+  text-decoration: none;
+
+  
+}
+
+.checkout-heading-link:hover{
+  color: #d19c97;
+  text-decoration: underline;
+}
+
+.dashhh{
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.checkout-second-container {
+  font-family: poppins;
+  padding: 48px 15px;
+}
+
+.chechout-checkout{
+  font-size: 16px;
+}
+
+.font-weight-semi-bold {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.checkout-label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.checkout-input {
+  font-size: 16px;
+  border: 1px solid #edf1ff;
+  margin-bottom: 12px;
+  width: 100%;
+  padding: 8px 0;
+  padding-left: 10px;
+  outline: none;
+}
+
+.checkout-select {
+  font-size: 16px;
+  width: 100%;
+  padding: 5px 8px;
+  border: 1px solid rgb(237, 241, 255);
+  line-height: 1.5;
+  outline: none;
+}
+
+.rowww {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.checkout-checkbox{
+  margin-right: 10px;
+  accent-color: #d19c97 ;
+  margin-top: 5px;
+}
+
+.checkout-check-text{
+ margin: 5px;
+}
+
+.checkout-billing-card{
+  border: 1px solid #edf1ff;
+  margin-bottom: 48px;
+}
+
+.checkout-billing-card-header{
+  background-color: #edf1ff;
+  padding: 10px 20px;
+}
+
+.checkout-card-body{
+  padding: 20px;
+}
+
+.checkout-item{
+  font-size: 20px;
+}
+
+.checkout-items{
+  font-size: 16px;
+}
+
+.checkout-card-products{
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+
+.checkout-hr{
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.checkout-total{
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.checkout-total-container{
+  border-top:  1px solid #edf1ff;
+  padding: 14px 20px ;
+}
+
+.checkout-radio{
+  margin-right: 8px;
+  accent-color: #d19c97;
+}
+
+.custom-radio{
+  margin-bottom: 8px;
+}
+
+.checkout-button{
+  width: 100%;
+  border: none;
+  font-weight: 700;
+  font-size: 22px;
+  margin: 14px 0;
+  padding: 15px 0;
+  background-color: #d19c97;
+  transition: all 0.2s;
+}
+
+.checkout-button:hover{
+  color: white;
+  background-color: #cf7171;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(124, 117, 117);
+  font-size: 16px;
+}
+
+@media (min-width: 1200px) {
+  .rowww {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .checkout-heading{
+    font-size: 38.4px;
+  }
+  .font-weight-semi-bold{
+    font-size: 24px;
+  }
+  .checkout-total,.checkout-button{
+    font-size: 21.12px;
+  }
+  .checkout-item{
+    font-size: 19.2px;
+  }
+  .checkout-heading-link,.dashhh,.chechout-checkout,.checkout-label,.checkout-input,.checkout-select,.checkout-items,.checkout-card-products,::placeholder{
+    font-size: 15.36px;
+  }
+}
+
+@media screen and (max-width: 260px) {
+  .checkout-heading{
+    font-size: 32px;
+  }
+  .font-weight-semi-bold{
+    font-size: 20px;
+  }
+  .checkout-total,.checkout-button{
+    font-size: 17.6px;
+  }
+  .checkout-item{
+    font-size: 16px;
+  }
+  .checkout-heading-link,.dashhh,.chechout-checkout,.checkout-label,.checkout-input,.checkout-select,.checkout-items,.checkout-card-products,::placeholder{
+    font-size: 12.8px;
+  }
+}
+
+@media screen and (max-width: 200px) {
+  .checkout-heading{
+    font-size: 25.6px;
+  }
+  .font-weight-semi-bold{
+    font-size: 16px;
+  }
+  .checkout-total,.checkout-button{
+    font-size: 14.08px;
+  }
+  .checkout-item{
+    font-size: 12.8px;
+  }
+  .checkout-heading-link,.dashhh,.chechout-checkout,.checkout-label,.checkout-input,.checkout-select,.checkout-items,.checkout-card-products,::placeholder{
+    font-size: 10.24px;
+  }
+}
+
+.card_item_showing{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.card_item_showing div:nth-child(odd){
+  background-color: lightblue;
+}
+
+.itemTextOverflow{
+  text-overflow: ellipsis;
+  width: 100px;
+}

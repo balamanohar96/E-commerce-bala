@@ -1,0 +1,74 @@
+.items:hover {
+  color: #d19c97 !important;
+}
+.heading {
+  color: #0c0c0b !important;
+  font-weight: 600;
+}
+.loginButton {
+  border-width: 0px;
+  background: none;
+}
+.navslide {
+  font-size: 16px;
+  margin-left: 40px;
+  font-family: sans-serif;
+}
+.cateegioressection {
+  z-index: 1px;
+}
+
+.carsoulimage {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+}
+.carousel-control-prev {
+  background-color: transparent;
+  border: none;
+}
+.carousel-control-next {
+  background-color: transparent;
+  border: none;
+}
+.visually-hidden {
+  display: none;
+}
+@media screen and (max-width: 568px) {
+  .text-container {
+    height: 120px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px !important;
+  }
+  .text-light {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+  }
+  .shop-button {
+    padding: 2px !important;
+  }
+  .image-container {
+    height: 300px;
+  }
+  .carsoulimage {
+    height: 300px;
+  }
+}
+
+.toggledropdown {
+  height: 65px;
+  margin-top: -1px;
+  padding: 0 30px;
+  background-color: #d19c97;
+}
+.toggledropdown:hover{
+  background-color: #d19c97;
+}
+.navoverplay {
+  width: calc(100% - 30px);
+  z-index: 1;
+}
