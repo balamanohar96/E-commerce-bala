@@ -17,7 +17,7 @@ function Cards() {
                 <h5 className="offer-card-offer mb-3">{each.offer}</h5>
                 <h1 className="offer-card-heading">{each.name}</h1>
                 <Link to="/shop" className="offer-card-button">
-            {each.button}
+                  {each.button}
                 </Link>
               </div>
             </div>
