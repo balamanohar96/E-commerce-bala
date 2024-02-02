@@ -1,0 +1,21 @@
+.font{
+    font-weight: bold;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 5px;
+  }
+  .form-control{
+    margin-left: 10px;
+  }
+  .form{
+    padding: 8px;
+    padding-right: 180px;
+  }
+  .form-bottom{
+    padding-bottom: 120px;
+    padding-right: 185px;
+  }
+  

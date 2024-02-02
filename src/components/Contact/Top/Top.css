@@ -1,0 +1,20 @@
+.bg {
+  background-color: #EDF1FF;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 300px;
+  margin-bottom: 50px;
+}
+
+.font{
+  font-weight: bold;
+  font-size: 40px;
+}
+.color{
+  color: #D19C97;
+}
