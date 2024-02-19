@@ -40,7 +40,7 @@ const TabSection = () => {
               eventKey="link-3"
               onClick={() => tabHandler(3)}
             >
-              Reviews (0)
+              Reviews
             </Nav.Link>
           </Nav.Item>
         </Nav>

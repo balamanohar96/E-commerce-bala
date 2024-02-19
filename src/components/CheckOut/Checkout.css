@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
 .checkout-first-container {
   background-color: #edf1ff;
@@ -7,31 +7,29 @@
   font-family: poppins;
 }
 
-.checkout-heading{
+.checkout-heading {
   font-weight: bold;
   margin-bottom: 12px;
-  font-size:  40px;
+  font-size: 40px;
 }
 
-.checkout-heading-caption{
+.checkout-heading-caption {
   display: flex;
   justify-content: center;
 }
 
-.checkout-heading-link{
+.checkout-heading-link {
   color: #d19c97;
   font-size: 16px;
   text-decoration: none;
-
-  
 }
 
-.checkout-heading-link:hover{
+.checkout-heading-link:hover {
   color: #d19c97;
   text-decoration: underline;
 }
 
-.dashhh{
+.dashhh {
   margin: 0 10px;
   font-size: 16px;
 }
@@ -41,7 +39,7 @@
   padding: 48px 15px;
 }
 
-.chechout-checkout{
+.chechout-checkout {
   font-size: 16px;
 }
 
@@ -83,68 +81,67 @@
   margin-left: 10px;
 }
 
-.checkout-checkbox{
+.checkout-checkbox {
   margin-right: 10px;
-  accent-color: #d19c97 ;
+  accent-color: #d19c97;
   margin-top: 5px;
 }
 
-.checkout-check-text{
- margin: 5px;
+.checkout-check-text {
+  margin: 5px;
 }
 
-.checkout-billing-card{
+.checkout-billing-card {
   border: 1px solid #edf1ff;
   margin-bottom: 48px;
 }
 
-.checkout-billing-card-header{
+.checkout-billing-card-header {
   background-color: #edf1ff;
   padding: 10px 20px;
 }
 
-.checkout-card-body{
+.checkout-card-body {
   padding: 20px;
 }
 
-.checkout-item{
+.checkout-item {
   font-size: 20px;
 }
 
-.checkout-items{
+.checkout-items {
   font-size: 16px;
 }
 
-.checkout-card-products{
+.checkout-card-products {
   margin-bottom: 16px;
   font-size: 16px;
 }
 
-
-.checkout-hr{
-  border-top: 1px solid rgba(0,0,0,0.1);
+.checkout-hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.checkout-total{
+.checkout-total {
   font-weight: 700;
   font-size: 22px;
 }
 
-.checkout-total-container{
-  border-top:  1px solid #edf1ff;
-  padding: 14px 20px ;
+.checkout-total-container {
+  border-top: 1px solid #edf1ff;
+  padding: 14px 20px;
 }
 
-.checkout-radio{
+.checkout-radio {
   margin-right: 8px;
   accent-color: #d19c97;
 }
 
-.custom-radio{
+.custom-radio {
   margin-bottom: 8px;
 }
 
-.checkout-button{
+.checkout-button {
   width: 100%;
   border: none;
   font-weight: 700;
@@ -152,18 +149,31 @@
   margin: 14px 0;
   padding: 15px 0;
   background-color: #d19c97;
-  transition: all 0.2s;
+  transition: all 0.3s;
 }
 
-.checkout-button:hover{
+.checkout-button:hover {
   color: white;
   background-color: #cf7171;
 }
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(124, 117, 117);
+  color: rgb(175, 169, 169);
   font-size: 16px;
+}
+
+.checkout-prooduct-name{
+  width: 230px;
+}
+
+@media screen and (max-width:1240px){
+  .checkout-card-products{
+    font-size: 15px;
+  }
+  .checkout-prooduct-name{
+    width: 210px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -173,70 +183,185 @@
   }
 }
 
+@media screen and (max-width:1110px){
+  .checkout-card-products{
+    font-size: 14px;
+  }
+  .checkout-prooduct-name{
+    width: 170px;
+  }
+}
+
+@media screen and (max-width:991px){
+  .checkout-card-products{
+    font-size: 16px;
+  }
+  .checkout-prooduct-name{
+    width: 500px;
+  }
+}
+
+@media screen and (max-width:720px){
+  .checkout-card-products{
+    font-size: 16px;
+  }
+  .checkout-prooduct-name{
+    width: 400px;
+  }
+}
+
+@media screen and (max-width:610px){
+  .checkout-prooduct-name{
+    width: 350px;
+  }
+}
+
+@media screen and (max-width:560px){
+  .checkout-prooduct-name{
+    width: 300px;
+  }
+}
+
 @media screen and (max-width: 500px) {
-  .checkout-heading{
+  .checkout-heading {
     font-size: 38.4px;
   }
-  .font-weight-semi-bold{
+  .font-weight-semi-bold {
     font-size: 24px;
   }
-  .checkout-total,.checkout-button{
+  .checkout-total,
+  .checkout-button {
     font-size: 21.12px;
   }
-  .checkout-item{
+  .checkout-item {
     font-size: 19.2px;
   }
-  .checkout-heading-link,.dashhh,.chechout-checkout,.checkout-label,.checkout-input,.checkout-select,.checkout-items,.checkout-card-products,::placeholder{
+  .checkout-heading-link,
+  .dashhh,
+  .chechout-checkout,
+  .checkout-label,
+  .checkout-input,
+  .checkout-select,
+  .checkout-items,
+  .checkout-card-products,
+  ::placeholder {
     font-size: 15.36px;
+  }
+  .checkout-prooduct-name{
+    width: 260px;
+  }
+}
+
+@media screen and (max-width:450px){
+  .checkout-prooduct-name{
+    width: 180px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width:400px){
+  .checkout-prooduct-name{
+    width: 150px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width:350px){
+  .checkout-prooduct-name{
+    width: 130px;
+    font-size: 13.5px;
+  }
+  .checkout-card-products{
+    font-size: 13.5px;
+  }
+}
+
+@media screen and (max-width:310px){
+  .checkout-prooduct-name{
+    width: 110px;
+    font-size: 13px;
+  }
+  .checkout-card-products{
+    font-size: 13px;
+  }
+}
+
+
+@media screen and (max-width:280px){
+  .checkout-prooduct-name{
+    width: 100px;
+    font-size: 12.8px;
+  }
+  .checkout-card-products{
+    font-size: 12.8px;
   }
 }
 
 @media screen and (max-width: 260px) {
-  .checkout-heading{
+  .checkout-heading {
     font-size: 32px;
   }
-  .font-weight-semi-bold{
+  .font-weight-semi-bold {
     font-size: 20px;
   }
-  .checkout-total,.checkout-button{
+  .checkout-total,
+  .checkout-button {
     font-size: 17.6px;
   }
-  .checkout-item{
+  .checkout-item {
     font-size: 16px;
   }
-  .checkout-heading-link,.dashhh,.chechout-checkout,.checkout-label,.checkout-input,.checkout-select,.checkout-items,.checkout-card-products,::placeholder{
+  .checkout-heading-link,
+  .dashhh,
+  .chechout-checkout,
+  .checkout-label,
+  .checkout-input,
+  .checkout-select,
+  .checkout-items,
+  .checkout-card-products,
+  ::placeholder {
     font-size: 12.8px;
+  }
+  .checkout-prooduct-name{
+    font-size: 11px;
   }
 }
 
 @media screen and (max-width: 200px) {
-  .checkout-heading{
+  .checkout-heading {
     font-size: 25.6px;
   }
-  .font-weight-semi-bold{
+  .font-weight-semi-bold {
     font-size: 16px;
   }
-  .checkout-total,.checkout-button{
+  .checkout-total,
+  .checkout-button {
     font-size: 14.08px;
   }
-  .checkout-item{
+  .checkout-item {
     font-size: 12.8px;
   }
-  .checkout-heading-link,.dashhh,.chechout-checkout,.checkout-label,.checkout-input,.checkout-select,.checkout-items,.checkout-card-products,::placeholder{
+  .checkout-heading-link,
+  .dashhh,
+  .chechout-checkout,
+  .checkout-label,
+  .checkout-input,
+  .checkout-select,
+  .checkout-items,
+  .checkout-card-products,
+  ::placeholder {
     font-size: 10.24px;
+  }
+  .checkout-prooduct-name{
+    font-size: 10px;
   }
 }
 
-.card_item_showing{
+.card_item_showing {
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
 }
-.card_item_showing div:nth-child(odd){
-  background-color: lightblue;
+.card_item_showing div:nth-child(odd) {
+  background-color: rgb(172, 212, 248);
 }
 
-.itemTextOverflow{
-  text-overflow: ellipsis;
-  width: 100px;
-}

@@ -25,12 +25,12 @@ const Shopingcarddipslay = () => {
   console.log(items);
 // total items in card count 
   let TotalCart = 0;
-  items.Carts.forEach(function (item) {
+  items.Carts.forEach(item => {
     TotalCart += item.quantity * item.price;
   });
   //calacualting the total price of the card items
-  function TotalPrice(price, tonggia) {
-    return Number(price * tonggia).toLocaleString("en-US");
+  function TotalPrice(price, NoOfItems) {
+    return price * NoOfItems;
   }
 
   const procedtocheckout = () => {

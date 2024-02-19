@@ -7,8 +7,8 @@ import { useSelector } from "react-redux";
 
 function Checkout() {
   const [checked, setChecked] = useState(false);
-  const items = useSelector((state) => state._cardProduct);
-  // console.log(items);
+  const items = useSelector((state) =>state._cardProduct);
+  console.log(items);
 
   let TotalCart = 0;
   items.Carts.forEach(function (item) {
@@ -249,7 +249,8 @@ function Checkout() {
                 <div className="card_item_showing">
                   {items.Carts.map((item, key) => (
                     <div key={key} className="d-flex justify-content-between">
-                      <p className="checkout-card-productsName"><span className="itemTextOverflow">{item.name}</span>{item.quantity}</p>
+                      <section className="checkout-prooduct-name"><p><span>{item.name}</span></p></section>
+                      <p className="checkout-card-products">{item.quantity}</p>
                       <p className="checkout-card-products">
                         ${(item.price * item.quantity).toFixed(2)}
                       </p>

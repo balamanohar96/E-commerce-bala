@@ -22,11 +22,7 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/shop" element={<ProductComponent />} />
-          <Route
-            exact
-            path="/shop/:id"
-            element={<SingleProduct />}
-          />
+          <Route exact path="/shop/:id" element={<SingleProduct />} />
           <Route exact path="/cartCheck" element={<Shopingcarddipslay />} />
           <Route exact path="/checkout" element={<Checkout />} />
           <Route exact path="/contactus" element={<Contactus />} />
@@ -39,4 +35,3 @@ const App = () => {
 };
 
 export default App;
-

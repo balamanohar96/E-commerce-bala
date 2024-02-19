@@ -29,7 +29,7 @@ const SingleProduct = () => {
   //decrease quantity
   const decreaseQuantity = () => {
     if (count > 1) {
-      setCount((prev) => prev - 1);
+      setCount(count-1);
     }
   };
 
@@ -93,6 +93,7 @@ const SingleProduct = () => {
                             type="radio"
                             className="input-item mr-2"
                             id={eachSize.id}
+                            name="productSize"
                           />
                           <label htmlFor={eachSize.id} className="mr-3">
                             {eachSize.label}
@@ -106,8 +107,15 @@ const SingleProduct = () => {
                     {SingleProductColor.map((eachColor) => {
                       return (
                         <div key={eachColor.id}>
-                          <input type="radio" className="input-item mr-2" />
-                          <label className="mr-3">{eachColor.color}</label>
+                          <input
+                            type="radio"
+                            name="productColor"
+                            id={eachColor.id}
+                            className="input-item mr-2"
+                          />
+                          <label htmlFor={eachColor.id} className="mr-3">
+                            {eachColor.color}
+                          </label>
                         </div>
                       );
                     })}

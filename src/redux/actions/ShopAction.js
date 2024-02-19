@@ -13,6 +13,6 @@ export const ERROR = 'ERROR'
         dispatch({ type: SUCCESS, payload: products });
       } catch (err) {
         dispatch({ type: ERROR, payload: err });
-      }
+     }
     };
   };
