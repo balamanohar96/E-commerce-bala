@@ -11,7 +11,7 @@ const AllSections = () => {
     <>
       <div className="pt-5">
         <h2 className="decorated">
-          <span>Trendy Products</span>
+          <span>Trendy Products bala</span>
         </h2>
       </div>
       <div className="container-fluid trendy-shop-container">
