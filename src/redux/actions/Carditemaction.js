@@ -8,11 +8,6 @@ export const ADD_CART = 'ADD_CART' ;
 export const UPDATE_CART = 'UPDATE_CART';
 export const DELETE_CART = 'DELETE_CART';
 /*GET NUMBER CART*/
-export function GetNumberCart(){
-    return{
-        type:'GET_NUMBER_CART'
-    }
-}
 
 
 //Add to card item passing item info with payload

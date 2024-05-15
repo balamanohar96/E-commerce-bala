@@ -5,13 +5,16 @@ import { Link } from "react-router-dom";
 import SocialMediaLinks from "../../constants/NavBar/TabNavabarData";
 
 const TopNavbar = () => {
-  const items = useSelector((state) => state._cardProduct);
-  // console.log(items);
+  const { Carts } = useSelector((state) => {
+   
+    return state._cardProduct
+  });
+
 
   let ItemsCountIncart = 0;
-  items.Carts.forEach(function (item) {
-    ItemsCountIncart += item.quantity;
-  });
+  for (let i = 0; i < Carts.length; i++) {
+    ItemsCountIncart = ItemsCountIncart + Carts[i].quantity;
+  }
   return (
     <div>
       <div className="container-fluid">

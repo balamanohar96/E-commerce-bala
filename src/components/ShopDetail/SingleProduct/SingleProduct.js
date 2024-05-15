@@ -15,7 +15,10 @@ import { ProductSizes } from "../../../constants/Colors";
 import { SingleProductColor } from "./../../../constants/Colors";
 
 const SingleProduct = () => {
-  const { loading, product } = useSelector((state) => state.productDetails);
+  const { loading, product } = useSelector((state) => {
+    console.log(state);
+    return state.productDetails;
+  });
   const [addTocard, setAddTocart] = useState(false);
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -24,12 +27,12 @@ const SingleProduct = () => {
 
   //increase quantity
   const increaseQuantity = () => {
-    setCount((prev) => prev + 1);
+    setCount(count + 1);
   };
   //decrease quantity
   const decreaseQuantity = () => {
     if (count > 1) {
-      setCount(count-1);
+      setCount(count - 1);
     }
   };
 
@@ -38,7 +41,7 @@ const SingleProduct = () => {
     setAddTocart(true);
 
     dispatch({ type: ADD_CART, payload: { ...item, quantity: count } });
-    setTimeout(() => setAddTocart(false), 1500);
+    setTimeout(() => setAddTocart(false), 1000);
   };
 
   useEffect(() => {
@@ -136,9 +139,11 @@ const SingleProduct = () => {
                           </svg>
                         </button>
                       </div>
+
                       <div className="value-container">
                         <p className="value ">{count}</p>
                       </div>
+
                       <div className="">
                         <button
                           onClick={increaseQuantity}

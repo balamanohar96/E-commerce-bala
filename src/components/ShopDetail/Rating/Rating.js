@@ -20,7 +20,7 @@ const Rating = ({ rating, reviews }) => {
       </span>
     );
   });
-  console.log(productRating);
+ 
   return (
     <>
       <div className="stars">
