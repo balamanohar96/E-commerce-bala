@@ -30,7 +30,7 @@ const Shopingcarddipslay = () => {
   });
   //calacualting the total price of the card items
   function TotalPrice(price, tonggia) {
-    return Number(price * tonggia).toLocaleString("en-US");
+    return (price * tonggia).toLocaleString("en-IN");
   }
 
   const procedtocheckout = () => {
@@ -175,7 +175,7 @@ const Shopingcarddipslay = () => {
                 <div className="d-flex justify-content-between mb-3 pt-1">
                   <h6 className="font-weight-medium">Subtotal</h6>
                   <h6 className="font-weight-medium">
-                    ${TotalCart.toFixed(2)}
+                    ${TotalCart.toLocaleString("en-IN")}
                   </h6>
                 </div>
                 <div className="d-flex justify-content-between">
@@ -186,7 +186,7 @@ const Shopingcarddipslay = () => {
               <div className="card-footer border-secondary bg-transparent">
                 <div className="d-flex justify-content-between mt-2">
                   <h5 className="font-weight-bold">Total</h5>
-                  <h5 className="font-weight-bold">${TotalCart.toFixed(2)}</h5>
+                  <h5 className="font-weight-bold">${TotalCart.toLocaleString("en-IN")}</h5>
                 </div>
 
                 <button

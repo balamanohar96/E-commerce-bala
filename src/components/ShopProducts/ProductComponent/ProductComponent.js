@@ -29,7 +29,7 @@ const ProductComponents = () => {
     setFilterByPrice((previousState) => {
       if (name === "all") {
         return {
-          all: checked,
+          all: true,
           between0and200: false,
           between201and400: false,
           between401and600: false,
@@ -39,8 +39,8 @@ const ProductComponents = () => {
       } else {
         return {
           ...previousState,
-          [name]: checked,
           all: false,
+          [name]: checked,
         };
       }
     });
@@ -90,15 +90,17 @@ const ProductComponents = () => {
     else if (sort === "priceHigh") return b.price - a.price;
     else if (sort === "ratingLow") return a.rating?.rate - b.rating?.rate;
     else if (sort === "ratingHigh") return b.rating?.rate - a.rating?.rate;
-    return null 
-  }  );
+    return null;
+  });
   //filitered data after seraching
   const SerachResults = sortedProducts.filter((each) =>
     each.title.toLowerCase().includes(searchInput.toLowerCase())
   );
+
   const searchInputHandler = (e) => {
     setSearchInput(e.target.value);
   };
+
   useEffect(() => {
     dispatch(fetchData());
   }, [dispatch]);
@@ -113,101 +115,79 @@ const ProductComponents = () => {
                 Filter by price
               </h5>
               <form>
-                <div className="d-flex justify-content-between mb-2">
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="all"
-                      checked={filterByPrice.all}
-                      onChange={handleCheckbox}
-                    />
-                    <label className="pl-2" htmlFor="price-all">
-                      All Price
-                    </label>
-                  </div>
-                  <span className="border font-weight-normal badge-span">
-                    1000
-                  </span>
+                <div className=" mb-2">
+                  <input
+                    type="checkbox"
+                    name="all"
+                    id="price-all"
+                    checked={filterByPrice.all}
+                    onChange={handleCheckbox}
+                  />
+                  <label className="pl-2" htmlFor="price-all">
+                    All Price
+                  </label>
                 </div>
-                <div className="d-flex justify-content-between mb-2">
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="between0and200"
-                      checked={filterByPrice.between0and200}
-                      onChange={handleCheckbox}
-                    />
-                    <label className="pl-2" htmlFor="price-1">
-                      $0 - $200
-                    </label>
-                  </div>
-                  <span className="border font-weight-normal badge-span">
-                    150
-                  </span>
+                <div className=" mb-2">
+                  <input
+                    type="checkbox"
+                    id="price-1"
+                    name="between0and200"
+                    checked={filterByPrice.between0and200}
+                    onChange={handleCheckbox}
+                  />
+                  <label className="pl-2" htmlFor="price-1">
+                    $0 - $200
+                  </label>
                 </div>
-                <div className="d-flex justify-content-between mb-2">
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="between201and400"
-                      checked={filterByPrice.between201and400}
-                      onChange={handleCheckbox}
-                    />
-                    <label className="pl-2" htmlFor="price-2">
-                      $201 - $400
-                    </label>
-                  </div>
-                  <span className="border font-weight-normal  badge-span">
-                    295
-                  </span>
+                <div className=" mb-2">
+                  <input
+                    type="checkbox"
+                    id="price-2"
+                    name="between201and400"
+                    checked={filterByPrice.between201and400}
+                    onChange={handleCheckbox}
+                  />
+                  <label className="pl-2" htmlFor="price-2">
+                    $201 - $400
+                  </label>
                 </div>
-                <div className="d-flex justify-content-between mb-2">
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="between401and600"
-                      checked={filterByPrice.between401and600}
-                      onChange={handleCheckbox}
-                    />
-                    <label className="pl-2" htmlFor="price-3">
-                      $401 - $600
-                    </label>
-                  </div>
-                  <span className="border font-weight-normal  badge-span">
-                    246
-                  </span>
+                <div className=" mb-2">
+                  <input
+                    type="checkbox"
+                    id="price-3"
+                    name="between401and600"
+                    checked={filterByPrice.between401and600}
+                    onChange={handleCheckbox}
+                  />
+                  <label className="pl-2" htmlFor="price-3">
+                    $401 - $600
+                  </label>
                 </div>
-                <div className="d-flex justify-content-between mb-2">
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="between601and800"
-                      checked={filterByPrice.between601and800}
-                      onChange={handleCheckbox}
-                    />
-                    <label className="pl-2" htmlFor="price-4">
-                      $601 - $800
-                    </label>
-                  </div>
-                  <span className="border font-weight-normal  badge-span">
-                    145
-                  </span>
+
+                <div className="mb-2">
+                  <input
+                    type="checkbox"
+                    id="price-4"
+                    name="between601and800"
+                    checked={filterByPrice.between601and800}
+                    onChange={handleCheckbox}
+                  />
+                  <label className="pl-2" htmlFor="price-4">
+                    $601 - $800
+                  </label>
                 </div>
-                <div className="d-flex justify-content-between">
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="between801and1000"
-                      checked={filterByPrice.between801and1000}
-                      onChange={handleCheckbox}
-                    />
-                    <label className="pl-2" htmlFor="price-5">
-                      $801 - $1000
-                    </label>
-                  </div>
-                  <span className="border font-weight-normal  badge-span">
-                    168
-                  </span>
+
+                <div>
+                  <input
+                    type="checkbox"
+                    id="price-5"
+                    name="between801and1000"
+                    checked={filterByPrice.between801and1000}
+                    onChange={handleCheckbox}
+                  />
+                  <label className="pl-2" htmlFor="price-5">
+                    $801 - $1000
+                  </label>
                 </div>
               </form>
             </div>
@@ -235,10 +215,8 @@ const ProductComponents = () => {
                   </form>
                   <div className="dropdown ml-4" style={{ display: "flex" }}>
                     <h5 style={{ marginRight: "10px" }}>Sort by :</h5>
-                    <select
-                      defaultValue={"az"}
-                      onChange={(e) => setSort(e.target.value)}
-                    >
+                    <select onChange={(e) => setSort(e.target.value)}>
+                      <option>select</option>
                       <option value="az">A - Z</option>
                       <option value="za">Z - A</option>
                       <option value="ratingLow">Rating Low</option>
@@ -265,7 +243,9 @@ const ProductComponents = () => {
                           />
                         </div>
                         <div className="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                          <h6 className="text-truncate m-3 mb-3">{each.title}</h6>
+                          <h6 className="text-truncate m-3 mb-3">
+                            {each.title}
+                          </h6>
                           <div className="d-flex justify-content-center">
                             <h6>${each.price}</h6>
                             <h6 className="text-muted ml-2">
@@ -292,7 +272,6 @@ const ProductComponents = () => {
                             <i className="fas fa-shopping-cart mr-1 fas-color"></i>
                             Add To Cart
                           </button>
-                          
                         </div>
                       </div>
                     </div>

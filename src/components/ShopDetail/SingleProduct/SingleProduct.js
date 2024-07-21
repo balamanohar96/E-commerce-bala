@@ -91,6 +91,7 @@ const SingleProduct = () => {
                         <div key={eachSize.id}>
                           <input
                             type="radio"
+                            name="size"
                             className="input-item mr-2"
                             id={eachSize.id}
                           />
@@ -106,8 +107,8 @@ const SingleProduct = () => {
                     {SingleProductColor.map((eachColor) => {
                       return (
                         <div key={eachColor.id}>
-                          <input type="radio" className="input-item mr-2" />
-                          <label className="mr-3">{eachColor.color}</label>
+                          <input id={eachColor.id} type="radio" name="color" className="input-item mr-2" />
+                          <label htmlFor={eachColor.id} className="mr-3">{eachColor.color}</label>
                         </div>
                       );
                     })}
@@ -168,8 +169,7 @@ const SingleProduct = () => {
                     <h6>Share on:</h6>
                     {SocialIConShareData.map((each) => (
                       <a
-                        href={each.link}
-                        target="_blank"
+                        href="1"
                         rel="noreferrer"
                         key={each.id}
                       >
