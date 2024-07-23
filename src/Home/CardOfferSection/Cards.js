@@ -9,11 +9,8 @@ function Cards() {
     <div className="offer-card-container pt-5">
       <div className="row rowww">
         {OfferCardData.map((each) => (
-          <div  key={each.id} className="col-md-6 pb-4">
-            <div
-             
-              className="offer-card-bg text-center text-md-right mb-2 p-5"
-            >
+          <div key={each.id} className="col-md-6 pb-4">
+            <div className="offer-card-bg text-center text-md-right mb-2 p-5">
               <img className="offer-card-img" src={each.imgUrl} alt={each.id} />
               <div className="z-index">
                 <h5 className="offer-card-offer mb-3">{each.offer}</h5>
