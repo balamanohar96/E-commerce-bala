@@ -1,7 +1,7 @@
 const SocialMediaLinks = [
   {
     id: 1,
-    link: "https://www.facebook.com/Maybinsefu1/",
+    link: "",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -14,7 +14,7 @@ const SocialMediaLinks = [
   },
   {
     id: 2,
-    link: "https://twitter.com/msystech",
+    link: "",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +27,7 @@ const SocialMediaLinks = [
   },
   {
     id: 3,
-    link: "https://in.linkedin.com/company/msys-technologies",
+    link: "",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ const SocialMediaLinks = [
   },
   {
     id: 4,
-    link: "https://www.instagram.com/msys_technologies/?hl=en",
+    link: "",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ const SocialMediaLinks = [
   },
   {
     id: 5,
-    link: "https://www.youtube.com/c/MSys-Tech",
+    link: "",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

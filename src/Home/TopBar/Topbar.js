@@ -44,7 +44,6 @@ const TopNavbar = () => {
                   key={each.id}
                   className="text-dark px-2"
                   rel="noreferrer"
-                  target="_blank"
                   href={each.link}
                 >
                   {each.icon}

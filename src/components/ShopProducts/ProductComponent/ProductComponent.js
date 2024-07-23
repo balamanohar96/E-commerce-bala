@@ -1,11 +1,10 @@
 // //dinesh,dhanaraju,venkateswara rao
 
-import React from "react";
+import React, { useState } from "react";
 import "./ProductComponent.css";
 import { SpinnerCircularFixed } from "spinners-react";
 import { Link } from "react-router-dom";
 import { AddCart } from "../../../redux/actions/Carditemaction";
-import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 const ProductComponents = () => {
