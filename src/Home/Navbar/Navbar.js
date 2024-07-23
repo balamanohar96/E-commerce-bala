@@ -1,49 +1,51 @@
 //saishiva- navbar design ,venkateswara rao login section detials
-import React, { useState } from "react";
+import React from "react";
 import CarsoulImages from "./CarsoulImages";
 import "./Navbar.css";
 import { Link, useLocation } from "react-router-dom";
-import Login from "../../pages/Login/Login";
-import SignUp from "./../../pages/SignUp/SignUp";
+// import { useState } from "react";
+// import Login from "../../pages/Login/Login";
+// import SignUp from "./../../pages/SignUp/SignUp";
 import productsCategory from "../../constants/NavBar/CategoryData";
 
 const Navbar = () => {
-  const [loginModal, setLoginmodal] = useState(false);
-  const [isLogined, setIslogined] = useState(false);
-  const [userName, setUserName] = useState("");
-  const [registerModal, setRegisterModal] = useState(false);
-  //check the cuurent location
   const location = useLocation();
-  //this for open login modal
-  const loginHandlermodal = (value) => {
-    setLoginmodal(value);
-  };
+  // const [isLogined, setIslogined] = useState(false);
+  // const [userName, setUserName] = useState("");
+  // const [registerModal, setRegisterModal] = useState(false);
+  // const [loginModal, setLoginmodal] = useState(false);
+  // //check the cuurent location
 
-  //aftre login logout button
-  const logoutButtonShow = (value) => {
-    setIslogined(value);
-  };
+  // //this for open login modal
+  // const loginHandlermodal = (value) => {
+  //   setLoginmodal(value);
+  // };
 
-  //user Details hanlder
-  const userDetailshandler = (details) => {
-    const nameuser = details[0].lastName;
+  // //aftre login logout button
+  // const logoutButtonShow = (value) => {
+  //   setIslogined(value);
+  // };
 
-    setUserName(nameuser);
-  };
+  // //user Details hanlder
+  // const userDetailshandler = (details) => {
+  //   const nameuser = details[0].lastName;
 
-  //register modal
-  const signupHandlermodal = (value) => {
-    setRegisterModal(value);
-  };
-  //create account handler when click signup here
-  const createAccountHanlder = (value) => {
-    setRegisterModal(value);
-  };
+  //   setUserName(nameuser);
+  // };
 
-  //login modal show after user register succesfully registered
-  const loginModalShowAfterRegister = (value) => {
-    setLoginmodal(value);
-  };
+  // //register modal
+  // const signupHandlermodal = (value) => {
+  //   setRegisterModal(value);
+  // };
+  // //create account handler when click signup here
+  // const createAccountHanlder = (value) => {
+  //   setRegisterModal(value);
+  // };
+
+  // //login modal show after user register succesfully registered
+  // const loginModalShowAfterRegister = (value) => {
+  //   setLoginmodal(value);
+  // };
 
   return (
     <div>
@@ -54,13 +56,6 @@ const Navbar = () => {
               className="btn shadow-none d-flex align-items-center justify-content-between  text-white w-100 toggledropdown"
               data-toggle="collapse"
               href="#navbar-vertical"
-              // style={{
-              //   height: "65px",
-              //   backgroundColor: "#D19C97",
-              //   marginTop: "-1px",
-              //   padding: "0 10px",
-              //   iaExpanded: "truear",
-              // }}
             >
               <h6 className="font-weight-bold m-4 text-dark">Categories</h6>
               <svg
@@ -74,7 +69,6 @@ const Navbar = () => {
             </a>
             <nav
               className="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light navoverplay"
-              // className="navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 collapse show "
               id="navbar-vertical"
             >
               <div
@@ -116,7 +110,8 @@ const Navbar = () => {
                   </div>
                 </div>
                 {productsCategory.map((each) => (
-                  <Link key={each.id}
+                  <Link
+                    key={each.id}
                     to={each.path}
                     className="font-weight-bold nav-item nav-link"
                   >
@@ -194,7 +189,7 @@ const Navbar = () => {
                     Contact
                   </Link>
                 </div>
-                {isLogined ? (
+                {/* {isLogined ? (
                   <div className="navbar-nav cartCheck py-0">
                     <p className="font-weight-bold nav-item nav-link items">
                       {userName}
@@ -221,30 +216,25 @@ const Navbar = () => {
                       Register
                     </p>
                   </div>
-                )}
+                )} */}
               </div>
             </nav>
-            {/* login page calling  */}
-            {/* login section handler by venkateswara rao */}
-            <div>
-              {loginModal && (
-                <Login
-                  logOutShow={logoutButtonShow}
-                  modalClose={loginHandlermodal}
-                  userDetailsGet={userDetailshandler}
-                  createAccout={createAccountHanlder}
-                />
-              )}
-            </div>
-            {/* register modal */}
-            <div>
-              {registerModal && (
-                <SignUp
-                  modalClose={signupHandlermodal}
-                  loginModalOpen={loginModalShowAfterRegister}
-                />
-              )}
-            </div>
+
+            {/* {loginModal && (
+              <Login
+                logOutShow={logoutButtonShow}
+                modalClose={loginHandlermodal}
+                userDetailsGet={userDetailshandler}
+                createAccout={createAccountHanlder}
+              />
+            )}
+
+            {registerModal && (
+              <SignUp
+                modalClose={signupHandlermodal}
+                loginModalOpen={loginModalShowAfterRegister}
+              />
+            )} */}
 
             {location.pathname === "/" && <CarsoulImages />}
           </div>

@@ -45,6 +45,7 @@ const SignUp = (props) => {
       //data post to local storage
       const personData = { lastName, username, password };
       localStorage.setItem("UserDetails", JSON.stringify(personData));
+      localStorage.removeItem("UserDetails")
       //POST request using axios inside useEffect React hook
       fetch("https://dummyjson.com/users/add", {
         method: "POST",

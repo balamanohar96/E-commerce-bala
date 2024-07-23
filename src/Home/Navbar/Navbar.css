@@ -23,17 +23,29 @@
   height: 430px;
   object-fit: cover;
 }
-.carousel-control-prev {
-  background-color: transparent;
-  border: none;
-}
+.carousel-control-prev,
 .carousel-control-next {
   background-color: transparent;
   border: none;
 }
+
 .visually-hidden {
   display: none;
 }
+.toggledropdown {
+  height: 65px;
+  margin-top: -1px;
+  padding: 0 30px;
+  background-color: #d19c97;
+}
+.toggledropdown:hover {
+  background-color: #d19c97;
+}
+.navoverplay {
+  width: calc(100% - 30px);
+  z-index: 1;
+}
+
 @media screen and (max-width: 568px) {
   .text-container {
     height: 120px;
@@ -57,18 +69,4 @@
   .carsoulimage {
     height: 300px;
   }
-}
-
-.toggledropdown {
-  height: 65px;
-  margin-top: -1px;
-  padding: 0 30px;
-  background-color: #d19c97;
-}
-.toggledropdown:hover{
-  background-color: #d19c97;
-}
-.navoverplay {
-  width: calc(100% - 30px);
-  z-index: 1;
 }
