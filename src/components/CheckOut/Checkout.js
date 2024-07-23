@@ -12,7 +12,7 @@ function Checkout() {
 
   let TotalCart = 0;
   items.Carts.forEach(function (item) {
-    TotalCart += (item.quantity * item.price)
+    TotalCart += item.quantity * item.price;
   });
   return (
     <>
@@ -249,9 +249,12 @@ function Checkout() {
                 <div className="card_item_showing">
                   {items.Carts.map((item, key) => (
                     <div key={key} className="d-flex justify-content-between">
-                      <p className="checkout-card-productsName"><span className="itemTextOverflow">{item.name}</span>{item.quantity}</p>
-                      <p className="checkout-card-products">
-                        ${(item.price * item.quantity).toFixed(2)}
+                      <p className="checkout-card-productsName">
+                        <span className="itemTextOverflow ">{item.name}</span>
+                        <span className="fw-bold"> x {item.quantity}</span>
+                      </p>
+                      <p className="checkout-card-products mx-1">
+                        ${(item.price * item.quantity).toLocaleString()}
                       </p>
                     </div>
                   ))}
@@ -260,7 +263,7 @@ function Checkout() {
                 <hr className="mt-0 checkout-hr" />
                 <div className="d-flex justify-content-between mb-4 pt-3">
                   <h6 className="checkout-items">Subtotal</h6>
-                  <h6 className="checkout-items">${TotalCart.toFixed(2)}</h6>
+                  <h6 className="checkout-items">${TotalCart.toLocaleString()}</h6>
                 </div>
                 <div className="d-flex justify-content-between">
                   <h6 className="checkout-items">Shipping</h6>
@@ -270,7 +273,7 @@ function Checkout() {
               <div className="checkout-total-container">
                 <div className="d-flex justify-content-between mt-2">
                   <h5 className="checkout-total">Total</h5>
-                  <h5 className="checkout-total">${TotalCart.toFixed(2) }</h5>
+                  <h5 className="checkout-total">${TotalCart.toLocaleString()}</h5>
                 </div>
               </div>
             </div>

@@ -1,25 +1,24 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./TrendySection.css";
 import { useDispatch } from "react-redux";
-import { ADD_CART } from "../../redux/actions/Carditemaction";
-import { Link } from 'react-router-dom';
+import { AddCart } from "../../redux/actions/Carditemaction";
+import { Link } from "react-router-dom";
 
 const TrendySection = (props) => {
   const dispatch = useDispatch();
-  const [itemadded,setItemAdded]=useState(false)
+  const [itemadded, setItemAdded] = useState(false);
   const { shopDetails } = props;
-  const { id,image, title, price, cross_price } = shopDetails;
+  const { id, image, title, price, cross_price } = shopDetails;
   const first_button = "View Detail";
   const second_button = "Add To Cart";
 
-  const addTocardhandler=()=>{
-    dispatch({ type: ADD_CART, payload: {...shopDetails,quantity:1} })
-    setItemAdded(true)
+  const addTocardhandler = () => {
+    dispatch(AddCart({ ...shopDetails, quantity: 1 }));
+    setItemAdded(true);
     setTimeout(() => {
-      setItemAdded(false) 
+      setItemAdded(false);
     }, 2000);
-
-  }
+  };
   return (
     <div className="border mb-4">
       <div className="border-0">
@@ -51,20 +50,20 @@ const TrendySection = (props) => {
           </Link>
         </div>
         <div className="bottom-button-container">
-          
           <button
             onClick={addTocardhandler}
-            className={itemadded ?"AddedCard_button":"Addcart-button"}
+            className={itemadded ? "AddedCard_button" : "Addcart-button"}
           >
             <svg
-            className="icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 576 512"
-            fill="#D19c97"
-          >
-            <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
-          </svg> &nbsp;&nbsp;
-            {itemadded?"Added to cart":`${second_button}`}
+              className="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512"
+              fill="#D19c97"
+            >
+              <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+            </svg>{" "}
+            &nbsp;&nbsp;
+            {itemadded ? "Added to cart" : `${second_button}`}
           </button>
         </div>
       </div>
@@ -73,4 +72,3 @@ const TrendySection = (props) => {
 };
 
 export default TrendySection;
-

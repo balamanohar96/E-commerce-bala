@@ -1,14 +1,14 @@
-import { GET, SUCCESS, ERROR } from "../actions/ShopAction";
+import { START_LOAD, SUCCESS, ERROR } from "../actions/ShopAction";
 
 const initialState = {
   products: [],
   error: "",
-  loading: false,
+  loading: false
 };
 
 export const ShopReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET:
+    case START_LOAD:
       return {
         ...state,
         loading: true,

@@ -2,28 +2,20 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  INCREASE_QUANTITY,
-  DECREASE_QUANTITY,
-  DELETE_CART,
+  IncreaseQuantity,
+  DecreaseQuantity,
+  DeleteCart,
 } from "../../redux/actions/Carditemaction";
 import "./ShopingCard.css";
 import { useNavigate, Link } from "react-router-dom";
 import EmptyCart from "./EmtyCard";
-
-// import { useDispatch } from 'react-redux';
-// import { Redirect } from 'react-router-dom';
-// import { productDetailsReducer } from './../../redux/reducers/ProductRreducer';
-//   DecreaseQuantity,
-//   DeleteCart,
-// } from "../../redux/actions/Carditemaction.js";
 
 const Shopingcarddipslay = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   // getting the redux state value
   const items = useSelector((state) => state._cardProduct);
-  console.log(items);
-// total items in card count 
+  // total items in card count
   let TotalCart = 0;
   items.Carts.forEach(function (item) {
     TotalCart += item.quantity * item.price;
@@ -40,15 +32,9 @@ const Shopingcarddipslay = () => {
   //deleted  or decrease  quantity
   const dcressQuantityhandler = (item, key) => {
     if (item.quantity === 1) {
-      dispatch({
-        type: DELETE_CART,
-        payload: key,
-      });
+      dispatch(DeleteCart(key));
     } else {
-      dispatch({
-        type: DECREASE_QUANTITY,
-        payload: key,
-      });
+      dispatch(DecreaseQuantity(key));
     }
   };
 
@@ -132,12 +118,7 @@ const Shopingcarddipslay = () => {
                           </h1>
                           <div className="input-group-btn">
                             <button
-                              onClick={() =>
-                                dispatch({
-                                  type: INCREASE_QUANTITY,
-                                  payload: key,
-                                })
-                              }
+                              onClick={() => dispatch(IncreaseQuantity(key))}
                               className="buttons-increse-quantity"
                             >
                               <i className="fa fa-plus"></i>
@@ -150,9 +131,7 @@ const Shopingcarddipslay = () => {
                       </td>
                       <td className="align-middle">
                         <button
-                          onClick={() =>
-                            dispatch({ type: DELETE_CART, payload: key })
-                          }
+                          onClick={() => dispatch(DeleteCart(key))}
                           className="card-deleted-button"
                         >
                           <i className="fa fa-trash"></i>
@@ -186,7 +165,9 @@ const Shopingcarddipslay = () => {
               <div className="card-footer border-secondary bg-transparent">
                 <div className="d-flex justify-content-between mt-2">
                   <h5 className="font-weight-bold">Total</h5>
-                  <h5 className="font-weight-bold">${TotalCart.toLocaleString("en-IN")}</h5>
+                  <h5 className="font-weight-bold">
+                    ${TotalCart.toLocaleString("en-IN")}
+                  </h5>
                 </div>
 
                 <button
@@ -204,18 +185,4 @@ const Shopingcarddipslay = () => {
   );
 };
 
-// const mapStateToProps = (state) => {
-//   //  console.log(state)
-//   return {
-//     items: state._cardProduct,
-//   };
-// };
-
 export default Shopingcarddipslay;
-
-//this method for mapstate props
-// export default connect(mapStateToProps, {
-//   IncreaseQuantity,
-//   DecreaseQuantity,
-//   DeleteCart,
-// })(Shopingcarddipslay);

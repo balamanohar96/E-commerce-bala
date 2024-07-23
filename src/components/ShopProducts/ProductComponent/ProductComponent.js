@@ -1,17 +1,16 @@
 // //dinesh,dhanaraju,venkateswara rao
 
 import React from "react";
-import { fetchData } from "../../../redux/actions/ShopAction";
 import "./ProductComponent.css";
 import { SpinnerCircularFixed } from "spinners-react";
 import { Link } from "react-router-dom";
-import { ADD_CART } from "../../../redux/actions/Carditemaction";
-import { useEffect, useState } from "react";
+import { AddCart } from "../../../redux/actions/Carditemaction";
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 const ProductComponents = () => {
   const dispatch = useDispatch();
-  const { products, loading } = useSelector((state) => ({ ...state.Products }));
+  const { products, loading } = useSelector((state) => state.Products);
   const [searchInput, setSearchInput] = useState("");
   const [sort, setSort] = useState(null);
   //states for price ranges slecting
@@ -100,10 +99,6 @@ const ProductComponents = () => {
   const searchInputHandler = (e) => {
     setSearchInput(e.target.value);
   };
-
-  useEffect(() => {
-    dispatch(fetchData());
-  }, [dispatch]);
 
   return (
     <>
@@ -262,10 +257,7 @@ const ProductComponents = () => {
                           </Link>
                           <button
                             onClick={() =>
-                              dispatch({
-                                type: ADD_CART,
-                                payload: { ...each, quantity: 1 },
-                              })
+                              dispatch(AddCart({ ...each, quantity: 1 }))
                             }
                             className="btn btn-sm text-dark p-0"
                           >

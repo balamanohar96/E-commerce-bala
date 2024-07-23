@@ -1,18 +1,18 @@
 import {
-  PRODUCT_DETAILS,
+  PRODUCT_DETAILS_LOAD,
   PRODUCT_DETAILS_SUCCESS,
   PRODUCT_DETAILS_ERROR,
 } from "../actions/ShopDetailAction";
 
 const initialState = {
-  product: {},
+  product: [],
   loading: false,
   error: "",
 };
 
 export const productDetailsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case PRODUCT_DETAILS:
+    case PRODUCT_DETAILS_LOAD:
       return {
         ...state,
         loading: true,

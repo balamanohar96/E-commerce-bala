@@ -16,38 +16,24 @@ function cardProduct(state = initProduct, action) {
 
   switch (type) {
     case ADD_CART:
-      //check any items in cart or not intilal check
-      if (state.Carts.length === 0) {
-        let cart = {
+      let check = false;
+      state.Carts.map((item, key) => {
+        if (item.id === payload.id) {
+          state.Carts[key].quantity += payload.quantity;
+          check = true;
+        }
+        return "";
+      });
+      //if item not in cart add the item in to cart
+      if (!check) {
+        let newItem = {
           id: payload.id,
           quantity: payload.quantity,
           name: payload.title,
           image: payload.image,
           price: payload.price,
         };
-        state.Carts.push(cart);
-      }
-      //already item in card increase the quantity
-      else {
-        let check = false;
-        state.Carts.map((item, key) => {
-          if (item.id === payload.id) {
-            state.Carts[key].quantity++;
-            check = true;
-          }
-          return "";
-        });
-        //if item not in cart add the item in to cart
-        if (!check) {
-          let _cart = {
-            id: payload.id,
-            quantity: payload.quantity,
-            name: payload.title,
-            image: payload.image,
-            price: payload.price,
-          };
-          state.Carts.push(_cart);
-        }
+        state.Carts.push(newItem);
       }
       return {
         ...state,
@@ -67,11 +53,12 @@ function cardProduct(state = initProduct, action) {
 
     case DELETE_CART:
       //Deleted the item into cart checking the id and removing product in cart
+      const filteredCart = state.Carts.filter(
+        (item) => item.id !== state.Carts[payload].id
+      );
       return {
         ...state,
-        Carts: state.Carts.filter((item) => {
-          return item.id !== state.Carts[payload].id;
-        }),
+        Carts: filteredCart,
       };
 
     default:

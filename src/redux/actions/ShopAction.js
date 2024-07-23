@@ -1,18 +1,23 @@
-import axios from "axios";
-
-export const GET = "GET";
+export const START_LOAD = "START_LOAD";
 export const SUCCESS = "SUCCESS";
 export const ERROR = "ERROR";
 
-export const fetchData = () => {
-  return async function (dispatch) {
-    dispatch({ type: GET });
-    try {
-      const response = await axios.get("https://fakestoreapi.com/products");
-      const products = await response.data;
-      dispatch({ type: SUCCESS, payload: products });
-    } catch (err) {
-      dispatch({ type: ERROR, payload: err });
-    }
+export function startLoad() {
+  return {
+    type: START_LOAD,
   };
-};
+}
+
+export function success(payload) {
+  return {
+    type: SUCCESS,
+    payload,
+  };
+}
+
+export function error(payload) {
+  return {
+    type: ERROR,
+    payload,
+  };
+}
