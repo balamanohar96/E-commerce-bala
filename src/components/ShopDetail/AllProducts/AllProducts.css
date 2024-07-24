@@ -35,3 +35,9 @@
   border: none;
 }
 
+.cart-added-active-btn{
+  background-color: rgb(120, 228, 120);
+  border-radius: 5px;
+  border: none;
+  padding: 1px 10px;
+}

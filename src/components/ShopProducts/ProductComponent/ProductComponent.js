@@ -4,11 +4,10 @@ import React, { useState } from "react";
 import "./ProductComponent.css";
 import { SpinnerCircularFixed } from "spinners-react";
 import { Link } from "react-router-dom";
-import { AddCart } from "../../../redux/actions/Carditemaction";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import AllProductsBtn from "../../ShopDetail/AllProducts/AllProductsBtn";
 
 const ProductComponents = () => {
-  const dispatch = useDispatch();
   const { products, loading } = useSelector((state) => state.Products);
   const [searchInput, setSearchInput] = useState("");
   const [sort, setSort] = useState(null);
@@ -254,15 +253,7 @@ const ProductComponents = () => {
                               View Detail
                             </button>
                           </Link>
-                          <button
-                            onClick={() =>
-                              dispatch(AddCart({ ...each, quantity: 1 }))
-                            }
-                            className="btn btn-sm text-dark p-0"
-                          >
-                            <i className="fas fa-shopping-cart mr-1 fas-color"></i>
-                            Add To Cart
-                          </button>
+                          <AllProductsBtn item={each} />
                         </div>
                       </div>
                     </div>

@@ -9,12 +9,10 @@ import { saveState } from "./redux/LocalStorage/LocalStorage";
 
 store.subscribe(
   throttle(() => {
-    console.debug("saveState");
+    //console.log("saveState");
     const { _cardProduct } = store.getState();
-    saveState({
-      _cardProduct,
-    });
-  }, 1000)
+    saveState({_cardProduct});
+  },1000)
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
