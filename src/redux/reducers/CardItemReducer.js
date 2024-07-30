@@ -16,6 +16,7 @@ function cardProduct(state = initProduct, action) {
 
   switch (type) {
     case ADD_CART:
+      //checking for if this item already exits in the cart or not
       let check = false;
       state.Carts.map((item, key) => {
         if (item.id === payload.id) {

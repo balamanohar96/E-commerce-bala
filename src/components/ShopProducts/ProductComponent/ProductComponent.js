@@ -9,6 +9,7 @@ import AllProductsBtn from "../../ShopDetail/AllProducts/AllProductsBtn";
 
 const ProductComponents = () => {
   const { products, loading } = useSelector((state) => state.Products);
+  console.log(products)
   const [searchInput, setSearchInput] = useState("");
   const [sort, setSort] = useState(null);
   //states for price ranges slecting
