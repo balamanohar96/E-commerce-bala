@@ -5,13 +5,17 @@ import AllSections from "./AllSections/AllSections";
 import Cards from "./CardOfferSection/Cards";
 import Vendor from "./vendorSection/Vendor";
 
+import StayUpdated from "./StayUpdated/StayUpdated";
+
 const Home = () => {
   return (
     <div>
       <Features />
-      <Product />
-      <Cards />
       <AllSections />
+      <Cards />
+      <StayUpdated />
+      <Product />
+
       <Vendor />
     </div>
   );

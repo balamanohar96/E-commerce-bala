@@ -23,7 +23,7 @@ const StayUpdated = () => {
             className="form-control input"
             placeholder="Email Goes Here"
           />
-          <button className="i-button">Subscribe</button>
+          <button type="button" className="i-button">Subscribe</button>
         </form>
       </div>
     </>

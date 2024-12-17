@@ -1,11 +1,8 @@
 import React from "react";
-
 import "./AllSections.css";
-
 import TrendySection from "../TrendySection/TrendySection";
-import StayUpdated from "../StayUpdated/StayUpdated";
-
 import TrendyProductsData from "../../constants/Products/TrendyProductsData";
+
 const AllSections = () => {
   return (
     <>
@@ -28,7 +25,6 @@ const AllSections = () => {
           })}
         </div>
       </div>
-      <StayUpdated />
     </>
   );
 };
